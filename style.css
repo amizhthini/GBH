@@ -1,0 +1,802 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: #f5f8f3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+.btn {
+  background: #1d3c26;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #145117;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #e5ede3;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav li a {
+  color: #1d3c26;
+  font-weight: bold;
+}
+
+.vendor-btn {
+  background: #1d3c26;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px; /* Adjusted padding: reduced top and bottom space */
+  background: #e5ede3;
+  gap: 0px; /* Control space between text and image */
+  margin-top: 0; /* Remove any top margin to reduce space above */
+  margin-bottom: 0px; /* Optional: adjust bottom margin if there's extra space below */
+}
+
+.hero-text {
+  max-width: 50%;
+  margin-bottom: 10; /* Removed bottom margin to reduce space below the text */
+  margin-right: 60px; /* Negative margin to bring the text closer to the image */
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px; /* Reduced margin below heading */
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 10px; /* Reduced margin to minimize space below the paragraph */
+}
+
+.hero-image {
+  flex: 1; /* Allow the image to take up available space */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 900px; /* Increased max-width to make the image larger */
+  width: 100%; /* Let the image resize but not stretch beyond its natural size */
+  margin-top: 0; /* Remove top margin for tighter alignment */
+  transform: scale(1.05); /* Keep original image size */
+  margin-left: -35px; /* Optional: You can use a negative margin on the image as well to shift it */
+}
+
+.highlight {
+  background: #1d3c26;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+/* Incubators Section */
+.incubators {
+  background: #e8f5e9; /* 🌿 Change this color to whatever you prefer */
+  text-align: center;
+  padding: 0px 40px; /* 👇 Adjust these values for top/bottom and left/right padding */
+  overflow: hidden;
+}
+
+.incubators h2 {
+  color: #1d3c26;
+
+  margin-bottom: 25px; /* Reduce space below heading if needed */
+}
+
+/* Scrolling logo bar */
+.incubators-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track with all logos */
+.incubators-track {
+  display: flex;
+  width: calc(200%);
+  animation: scroll-logos 45s linear infinite; /* Smooth infinite scroll */
+}
+
+/* Individual incubator logos */
+.incubators-track img {
+  height: 70px;
+  margin: 0 25px;
+  opacity: 0.9;
+  filter: brightness(0.9) contrast(1.05);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.incubators-track img:hover {
+  opacity: 1;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Animation keyframes for continuous left scroll */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .incubators-track img {
+    height: 50px;
+    margin: 0 15px;
+  }
+  .incubators {
+    padding: 30px 15px; /* Smaller padding for mobile */
+  }
+}
+
+
+
+/* Account Section */
+.account {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 15px 40px; /* Reduced top padding to reduce space above the text */
+  background: #f5f8f3;
+}
+
+.account-text {
+ flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /* Vertically center the content */
+  align-items: left; /* Horizontally center the content */
+  text-align: left; /* Ensure text is also centered */
+  margin-top: 0;
+  margin-bottom: -40px;
+
+}
+
+.account-text h1 {
+  margin-top: 10; /* Remove margin above the heading */
+  margin-bottom: 20px; /* Adjust space below the heading as needed */
+}
+
+.account-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card ul {
+  margin-bottom: 15px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  
+  /* Flexbox to center the content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between the elements inside the card */
+  align-items: center; /* Horizontally center all content inside the card */
+  height: 100%; /* Ensure the card height takes full space */
+}
+
+.card button {
+  background: #1d3c26;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+}
+
+.account-image img {
+  max-width: 400px;
+  width: 20%;
+  border-radius: 12px;
+ padding: 0px 20px;
+}
+
+
+
+/* HOW IT WORKS (Updated) */
+.how-it-works {
+  background: linear-gradient(to bottom right, #f6fff8, #e8f5e9);
+  padding: 0px 5%; /* Reduced padding to reduce height of the section */
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Reduced the gap between text and image */
+  flex-wrap: wrap;
+}
+
+.how-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  gap: -200px; /* Reduced gap between text and image */
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.how-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: -200px; /* Reduced space below the title */
+  width: 100%; /* Ensure the title spans across both sections */
+}
+
+.how-left {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-images {
+  display: inline-block;
+}
+
+.phone {
+  width: 600px; /* Reduced the size of the phone image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 24px;
+}
+
+.how-right {
+  flex: 1;
+}
+
+.how-right h2 {
+  font-size: 1.8rem; /* Reduced size of the subheading */
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 20px; /* Reduced space below the subheading */
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap between the steps */
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+  background: #26c281;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-text h4 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.step-text p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .how-it-works {
+    flex-direction: column;
+    text-align: center;
+  }
+  .how-right {
+    text-align: left;
+  }
+}
+
+/* Why Hive */
+.why-hive {
+  text-align: center;
+  background: #fff;
+  padding: 60px 40px;
+}
+
+.why-hive h2 {
+  margin-bottom: 40px;
+  color: #1d3c26;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-item {
+  flex: 1 1 200px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: center; /* Centers the content horizontally */
+  text-align: center; /* Ensures text is centered */
+}
+
+.why-item img {
+  width: 80px; /* Increased image size */
+  height: 80px; /* Make sure height matches width */
+  object-fit: contain; /* Ensures image scales properly within the container */
+  margin-bottom: 15px; /* Space below image */
+}
+
+.why-item h4 {
+  margin-bottom: 10px;
+  color: #1d3c26;
+}
+
+/* ==============================
+   CUSTOMERS SECTION (Updated)
+   ============================== */
+.customers {
+  background: #e5ede3;
+  padding: 80px 40px;
+}
+
+.customers-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* Space between image and text */
+  flex-wrap: wrap;
+}
+
+/* Left side (Image) */
+.customers-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customers-left img {
+  width: 550px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Right side (Text + Testimonials) */
+.customers-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 500px;
+}
+
+.customers-right h2 {
+  color: #1d3c26;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #26c281;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+}
+
+/* Each Testimonial */
+.testimonial {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: none;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Customer Info */
+.customer-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+}
+
+.customer-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.customer-info h4 {
+  margin: 0;
+  color: #1d3c26;
+}
+
+.customer-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.stars {
+  color: #26c281;
+  font-size: 1.1rem;
+}
+
+/* Navigation Buttons */
+.testimonial-nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial-nav button {
+  background: #1d3c26;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.testimonial-nav button:hover {
+  background: #26c281;
+}
+
+/* ==========================
+   Responsive Adjustments
+   ========================== */
+@media (max-width: 900px) {
+  .customers-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .customers-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .customers-left img {
+    width: 80%;
+  }
+}
+
+
+/* Vendor Section */
+.vendor {
+  background: #f5f8f3;
+  padding: 40px 40px;
+}
+
+.vendor-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.vendor-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #fff; /* Background for the vendor section box */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Box shadow applied only to the text box */
+  flex: 1; /* Ensure the box occupies available space */
+}
+
+.vendor-text {
+  flex: 1;
+margin-bottom: 10px;
+}
+
+.vendor-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.vendor-image {
+  flex: 1;
+  position: relative;
+}
+
+.vendor-image img {
+  width: 100%;
+  border-radius: 12px; /* No box shadow here */
+}
+
+.vendor-badge {
+  background: #1d3c26;
+  color: #fff;
+  padding: 0px 0px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+/* Vendor Benefits */
+.vendor-benefits {
+  background: #fff;
+  text-align: center;
+  padding: 60px 40px; /* Slightly reduced padding for a tighter layout */
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically (title → images → button) */
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Balanced spacing between sections */
+}
+
+.benefits-text h1 {
+  font-size: 3em;
+  color: #1d3c26;
+  margin: 10px 0 20px 0;
+}
+
+.benefits-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%; /* Make image container full width */
+}
+
+.benefits-images img {
+  width: 200%; /* Each image will take full width if alone */
+  max-width: 900px; /* Limit so it doesn’t get too large */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  object-fit: cover; /* Keeps proportions while filling available width */
+}
+
+/* Optional: Button below images */
+.benefits-button {
+  margin-top: 20px;
+}
+
+.benefits-button button {
+  background: #1d3c26;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.benefits-button button:hover {
+  background: #26c281;
+}
+
+
+/* Partners Section */
+.partners {
+  background: #f5f8f3;
+  text-align: center;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.partners h2 {
+  color: #1d3c26;
+  margin-bottom: 30px;
+}
+
+/* Scrolling logo bar */
+.partners-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track with all logos */
+.partners-track {
+  display: flex;
+  width: calc(200%);
+  animation: scroll-logos 45s linear infinite; /* Slower for smoother scroll */
+}
+
+/* Individual logos */
+.partners-track img {
+  height: 70px; /* Slightly larger for clarity */
+  margin: 0 25px;
+  opacity: 0.9;
+  filter: brightness(0.9) contrast(1.05);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.partners-track img:hover {
+  opacity: 1;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Animation keyframes for continuous left scroll */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .partners-track img {
+    height: 50px;
+    margin: 0 15px;
+  }
+  .partners {
+    padding: 40px 20px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #1d3c26;
+  color: #fff;
+  padding: 60px 40px;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+}
+
+.newsletter button {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero, .account, .how-it-works, .vendor-content, .benefits-content {
+    flex-direction: column;
+  }
+  .hero-text, .account-text, .vendor-text, .benefits-text {
+    max-width: 100%;
+  }
+  .hero-image, .account-image, .vendor-image, .benefits-images {
+    width: 100%;
+  }
+}
